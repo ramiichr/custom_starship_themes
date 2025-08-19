@@ -28,7 +28,7 @@ $cmd_duration\
 $line_break\
 $character"""
 
-palette = 'retro_hacker_amber'
+palette = 'retro_hacker_green'
 
 [os]
 disabled = false
@@ -164,6 +164,122 @@ style = "bg:lavender"
 disabled = false
 show_notifications = true
 min_time_to_notify = 45000
+
+[palettes.matrix_crt]
+# Based on the Matrix CRT VS Code theme - vintage CRT terminal aesthetic
+rosewater = "#00ff41"
+flamingo = "#33ff66"
+pink = "#66ff99"
+mauve = "#00ccff"
+red = "#ff8c42"
+maroon = "#ff6b35"
+peach = "#ff5722"
+yellow = "#ffa500"
+green = "#00ff41"
+teal = "#33ff66"
+sky = "#66ff99"
+sapphire = "#00ccff"
+blue = "#4fc3f7"
+lavender = "#29b6f6"
+text = "#00ff41"
+subtext1 = "#33ff66"
+subtext0 = "#66ff99"
+overlay2 = "#00cc33"
+overlay1 = "#009926"
+overlay0 = "#006619"
+surface2 = "#0d3318"
+surface1 = "#0a2613"
+surface0 = "#07190d"
+base = "#000000"
+mantle = "#000000"
+crust = "#000000"
+
+[palettes.matrixish]
+# Based on the Matrixish VS Code theme - uniform green aesthetic
+rosewater = "#00ff80"
+flamingo = "#00ff66"
+pink = "#00ff4d"
+mauve = "#00e650"
+red = "#00cc44"
+maroon = "#00b338"
+peach = "#009933"
+yellow = "#00ff80"
+green = "#00ff66"
+teal = "#00ff4d"
+sky = "#00e650"
+sapphire = "#00cc44"
+blue = "#00b338"
+lavender = "#009933"
+text = "#00ff66"
+subtext1 = "#00ff4d"
+subtext0 = "#00e650"
+overlay2 = "#00cc44"
+overlay1 = "#00b338"
+overlay0 = "#009933"
+surface2 = "#002b1a"
+surface1 = "#001f13"
+surface0 = "#00130d"
+base = "#000000"
+mantle = "#000000"
+crust = "#000000"
+
+[palettes.rbe_matrix_skin]
+# Based on the RBE Matrix Skin Theme VS Code theme
+rosewater = "#00ff00"
+flamingo = "#00ff41"
+pink = "#39ff14"
+mauve = "#00ccff"
+red = "#ff6b6b"
+maroon = "#ff4757"
+peach = "#ff3838"
+yellow = "#ffff00"
+green = "#00ff00"
+teal = "#00ff41"
+sky = "#39ff14"
+sapphire = "#00ccff"
+blue = "#4dabf7"
+lavender = "#339af0"
+text = "#00ff00"
+subtext1 = "#00ff41"
+subtext0 = "#39ff14"
+overlay2 = "#00cc00"
+overlay1 = "#00aa00"
+overlay0 = "#008800"
+surface2 = "#003300"
+surface1 = "#002200"
+surface0 = "#001100"
+base = "#000000"
+mantle = "#000000"
+crust = "#000000"
+
+[palettes.dark_theme_green]
+# Based on the Dark Theme with Green VS Code theme
+rosewater = "#7dd3fc"
+flamingo = "#67e8f9"
+pink = "#22d3ee"
+mauve = "#06b6d4"
+red = "#0891b2"
+maroon = "#0e7490"
+peach = "#155e75"
+yellow = "#0f766e"
+green = "#059669"
+teal = "#10b981"
+sky = "#34d399"
+sapphire = "#6ee7b7"
+blue = "#a7f3d0"
+lavender = "#bbf7d0"
+text = "#ffffff"
+subtext1 = "#d1fae5"
+subtext0 = "#a7f3d0"
+overlay2 = "#6ee7b7"
+overlay1 = "#34d399"
+overlay0 = "#10b981"
+surface2 = "#065f46"
+surface1 = "#064e3b"
+surface0 = "#022c22"
+base = "#0f172a"
+mantle = "#020617"
+crust = "#000000"
 
 [palettes.retro_hacker_pink]
 # Based on the Retro Hacker Pink VS Code theme
