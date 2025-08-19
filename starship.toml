@@ -1,0 +1,428 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[](red)\
+$os\
+$username\
+[](bg:peach fg:red)\
+$directory\
+[](bg:yellow fg:peach)\
+$git_branch\
+$git_status\
+[](fg:yellow bg:green)\
+$c\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+[](fg:green bg:sapphire)\
+$conda\
+[](fg:sapphire bg:lavender)\
+$time\
+[ ](fg:lavender)\
+$cmd_duration\
+$line_break\
+$character"""
+
+palette = 'hacker_pink'
+
+[os]
+disabled = false
+style = "bg:red fg:crust"
+
+[os.symbols]
+Windows = ""
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+[username]
+show_always = true
+style_user = "bg:red fg:crust"
+style_root = "bg:red fg:crust"
+format = '[ $user]($style)'
+
+[directory]
+style = "bg:peach fg:crust"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "bg:yellow"
+format = '[[ $symbol $branch ](fg:crust bg:yellow)]($style)'
+
+[git_status]
+style = "bg:yellow"
+format = '[[($all_status$ahead_behind )](fg:crust bg:yellow)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+
+[c]
+symbol = " "
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+
+[php]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+
+[java]
+symbol = " "
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+
+[kotlin]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+
+[python]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version)(\(#$virtualenv\)) ](fg:crust bg:green)]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:sapphire"
+format = '[[ $symbol( $context) ](fg:crust bg:sapphire)]($style)'
+
+[conda]
+symbol = "  "
+style = "fg:crust bg:sapphire"
+format = '[$symbol$environment ]($style)'
+ignore_base = false
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:lavender"
+format = '[[  $time ](fg:crust bg:lavender)]($style)'
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = '[❯](bold fg:green)'
+error_symbol = '[❯](bold fg:red)'
+vimcmd_symbol = '[❮](bold fg:green)'
+vimcmd_replace_one_symbol = '[❮](bold fg:lavender)'
+vimcmd_replace_symbol = '[❮](bold fg:lavender)'
+vimcmd_visual_symbol = '[❮](bold fg:yellow)'
+
+[cmd_duration]
+show_milliseconds = true
+format = " in $duration "
+style = "bg:lavender"
+disabled = false
+show_notifications = true
+min_time_to_notify = 45000
+
+[palettes.hacker_pink]
+# Based on the Hacker Pink theme you showed
+rosewater = "#ff00ff"
+flamingo = "#ff1aff"
+pink = "#ff33ff"
+mauve = "#e600e6"
+red = "#cc00cc"
+maroon = "#b300b3"
+peach = "#9900cc"
+yellow = "#ff00ff"
+green = "#e600e6"
+teal = "#cc00cc"
+sky = "#b300b3"
+sapphire = "#9900cc"
+blue = "#8000b3"
+lavender = "#6600cc"
+text = "#ff00ff"
+subtext1 = "#ff1aff"
+subtext0 = "#e600e6"
+overlay2 = "#cc00cc"
+overlay1 = "#b300b3"
+overlay0 = "#9900cc"
+surface2 = "#4d004d"
+surface1 = "#330033"
+surface0 = "#1a001a"
+base = "#0d000d"
+mantle = "#000000"
+crust = "#000000"
+
+[palettes.hacker_blue]
+# Based on the Hacker Blue theme you showed
+rosewater = "#00ffff"
+flamingo = "#00e6e6"
+pink = "#00cccc"
+mauve = "#00b3b3"
+red = "#009999"
+maroon = "#008080"
+peach = "#006666"
+yellow = "#00ffff"
+green = "#00e6e6"
+teal = "#00cccc"
+sky = "#00b3b3"
+sapphire = "#009999"
+blue = "#008080"
+lavender = "#006666"
+text = "#00ffff"
+subtext1 = "#00e6e6"
+subtext0 = "#00cccc"
+overlay2 = "#00b3b3"
+overlay1 = "#009999"
+overlay0 = "#008080"
+surface2 = "#004d4d"
+surface1 = "#003333"
+surface0 = "#001a1a"
+base = "#000d0d"
+mantle = "#000000"
+crust = "#000000"
+
+[palettes.tokyo_night_dark]
+# Based on the Tokyo Night Dark theme you showed
+rosewater = "#f7768e"
+flamingo = "#ff9e64"
+pink = "#bb9af7"
+mauve = "#9d7cd8"
+red = "#f7768e"
+maroon = "#ff9e64"
+peach = "#e0af68"
+yellow = "#e0af68"
+green = "#9ece6a"
+teal = "#73daca"
+sky = "#7dcfff"
+sapphire = "#7aa2f7"
+blue = "#7aa2f7"
+lavender = "#bb9af7"
+text = "#c0caf5"
+subtext1 = "#a9b1d6"
+subtext0 = "#9aa5ce"
+overlay2 = "#565f89"
+overlay1 = "#414868"
+overlay0 = "#3b4261"
+surface2 = "#2f3549"
+surface1 = "#24283b"
+surface0 = "#1f2335"
+base = "#1a1b26"
+mantle = "#16161e"
+crust = "#15161e"
+
+[palettes.platzi_classic]
+# Based on the Platzi Theme Classic you showed
+rosewater = "#ff6b9d"
+flamingo = "#ff7f7f"
+pink = "#ff9999"
+mauve = "#c792ea"
+red = "#f78c6c"
+maroon = "#ff8a80"
+peach = "#ffab91"
+yellow = "#c3e88d"
+green = "#98d982"
+teal = "#89ddff"
+sky = "#82aaff"
+sapphire = "#4fc3f7"
+blue = "#42a5f5"
+lavender = "#bb86fc"
+text = "#eeffff"
+subtext1 = "#b2ccd6"
+subtext0 = "#8796b0"
+overlay2 = "#676e95"
+overlay1 = "#545c7e"
+overlay0 = "#464b5d"
+surface2 = "#3a3f58"
+surface1 = "#2f3349"
+surface0 = "#263238"
+base = "#1e2030"
+mantle = "#191a2a"
+crust = "#0f1419"
+
+[palettes.p_black]
+# Based on the P \ Black theme you showed - warm earthy tones
+rosewater = "#ffd700"
+flamingo = "#ffb347"
+pink = "#ff8c42"
+mauve = "#d2691e"
+red = "#cd853f"
+maroon = "#a0522d"
+peach = "#daa520"
+yellow = "#ffd700"
+green = "#f4a460"
+teal = "#deb887"
+sky = "#d2b48c"
+sapphire = "#bc9a6a"
+blue = "#8b7355"
+lavender = "#696969"
+text = "#f5deb3"
+subtext1 = "#deb887"
+subtext0 = "#d2b48c"
+overlay2 = "#bc9a6a"
+overlay1 = "#8b7355"
+overlay0 = "#696969"
+surface2 = "#2f2f2f"
+surface1 = "#1a1a1a"
+surface0 = "#0d0d0d"
+base = "#000000"
+mantle = "#000000"
+crust = "#000000"
+
+
+[palettes.night_hacker]
+# Based on the Night Hacker theme you showed
+rosewater = "#ff6b35"
+flamingo = "#f7931e"
+pink = "#ffa500"
+mauve = "#00d4ff"
+red = "#ff4757"
+maroon = "#ff3742"
+peach = "#ff6348"
+yellow = "#ffa502"
+green = "#7bed9f"
+teal = "#70a1ff"
+sky = "#5352ed"
+sapphire = "#00cec9"
+blue = "#0984e3"
+lavender = "#6c5ce7"
+text = "#00d4ff"
+subtext1 = "#74b9ff"
+subtext0 = "#81ecec"
+overlay2 = "#00cec9"
+overlay1 = "#55a3ff"
+overlay0 = "#0984e3"
+surface2 = "#2d3436"
+surface1 = "#1e2124"
+surface0 = "#0f1419"
+base = "#0d1117"
+mantle = "#010409"
+crust = "#000000"
+
+[palettes.midnight_city]
+# Based on the Midnight City theme you showed
+rosewater = "#ff79c6"
+flamingo = "#ff6ac7"
+pink = "#ff5cc8"
+mauve = "#bd93f9"
+red = "#8b5cf6"
+maroon = "#7c3aed"
+peach = "#6d28d9"
+yellow = "#a855f7"
+green = "#c084fc"
+teal = "#22d3ee"
+sky = "#06b6d4"
+sapphire = "#0891b2"
+blue = "#0ea5e9"
+lavender = "#3b82f6"
+text = "#f8fafc"
+subtext1 = "#e2e8f0"
+subtext0 = "#cbd5e1"
+overlay2 = "#94a3b8"
+overlay1 = "#64748b"
+overlay0 = "#475569"
+surface2 = "#374151"
+surface1 = "#1f2937"
+surface0 = "#111827"
+base = "#0f172a"
+mantle = "#020617"
+crust = "#000000"
+
+[palettes.matrix_green]
+# Based on the Matrix-style green theme you showed
+rosewater = "#00ff41"
+flamingo = "#00ff00"
+pink = "#00e600"
+mauve = "#00cc00"
+red = "#00b300"
+maroon = "#009900"
+peach = "#008000"
+yellow = "#00ff41"
+green = "#00ff00"
+teal = "#00e600"
+sky = "#00cc00"
+sapphire = "#00b300"
+blue = "#009900"
+lavender = "#008000"
+text = "#00ff41"
+subtext1 = "#00ff00"
+subtext0 = "#00e600"
+overlay2 = "#00cc00"
+overlay1 = "#00b300"
+overlay0 = "#009900"
+surface2 = "#004d00"
+surface1 = "#003300"
+surface0 = "#001a00"
+base = "#000000"
+mantle = "#000d00"
+crust = "#000000"
+
+[palettes.terminal_green]
+# Based on the terminal colors you showed
+rosewater = "#7dd3fc"
+flamingo = "#67e8f9"
+pink = "#22d3ee"
+mauve = "#06b6d4"
+red = "#0891b2"
+maroon = "#0e7490"
+peach = "#155e75"
+yellow = "#0f766e"
+green = "#059669"
+teal = "#10b981"
+sky = "#34d399"
+sapphire = "#6ee7b7"
+blue = "#a7f3d0"
+lavender = "#bbf7d0"
+text = "#ffffff"
+subtext1 = "#d1fae5"
+subtext0 = "#a7f3d0"
+overlay2 = "#6ee7b7"
+overlay1 = "#34d399"
+overlay0 = "#10b981"
+surface2 = "#065f46"
+surface1 = "#064e3b"
+surface0 = "#022c22"
+base = "#0f172a"
+mantle = "#020617"
+crust = "#000000"
